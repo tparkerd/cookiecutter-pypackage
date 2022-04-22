@@ -9,15 +9,12 @@ open source' -%}
 {% if cookiecutter.add_pyup_badge == 'y' %}
 [[!image](https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg)](<https://pyup.io/repos/github/>{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/)
 {% endif %}
-
 {{ cookiecutter.project_short_description }}
-
 {% if is_open_source %}
 * Free software: {{
 cookiecutter.open_source_license }}
 * Documentation: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io.
 {% endif %}
-
 ## Features
 
 * TODO
