@@ -4,14 +4,12 @@
 open source' -%}
 
 {% if is_open_source %}
-[![image](https://img.shields.io/travis/{{ cookiecutter.github_username  } }/{{ cookiecutter.project_slug  } }.svg)](https://travis-ci.com/{{ cookiecutter.github_username  } }/{{ cookiecutter.project_slug  } })
-[![Documentation Status](https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-")  } }/badge/?version=latest)](https://{{ cookiecutter.project_slug | replace("_", "-")  } }.readthedocs.io/en/latest/?version=latest)
+[![image](https://img.shields.io/travis/ {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug  }}.svg)](https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
+[![Documentation Status](https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest)](https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?version=latest)
 {%- endif %}
-{% if cookiecutter.add_pyup_badge == 'y' %} [[!image](
-<https://pyup.io/repos/github/>{{ cookiecutter.github_username }}/{{
-cookiecutter.project_slug }}/shield.svg)](
-<https://pyup.io/repos/github/>{{ cookiecutter.github_username }}/{{
-cookiecutter.project_slug }}/) {% endif %}
+{% if cookiecutter.add_pyup_badge == 'y' %}
+[[!image](https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg)](<https://pyup.io/repos/github/>{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/)
+{% endif %}
 
 {{ cookiecutter.project_short_description }}
 
