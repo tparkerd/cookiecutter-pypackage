@@ -1,11 +1,10 @@
-{% set is\_open\_source = cookiecutter.open\_source\_license != 'Not
-open source' -%} {% for \_ in cookiecutter.project\_name %}={% endfor %}
-{{ cookiecutter.project\_name }} {% for \_ in cookiecutter.project\_name
-%}={% endfor %}
+# {{ cookiecutter.project_name }}
+{% set is_open_source = cookiecutter.open_source_license != 'Not
+open source' -%}
 
-{% if is\_open\_source %} .. image:: <https://img.shields.io/pypi/v/>{{
-cookiecutter.project\_slug }}.svg :target:
-<https://pypi.python.org/pypi/>{{ cookiecutter.project\_slug }}
+{% if is_open_source %} .. image:: <https://img.shields.io/pypi/v/>{{
+cookiecutter.project_slug }}.svg :target:
+<https://pypi.python.org/pypi/>{{ cookiecutter.project_slug }}
 
 [![image](https://img.shields.io/travis/%7B%7B%20cookiecutter.github_username%20%7D%7D/%7B%7B%20cookiecutter.project_slug%20%7D%7D.svg)](https://travis-ci.com/%7B%7B%20cookiecutter.github_username%20%7D%7D/%7B%7B%20cookiecutter.project_slug%20%7D%7D)
 
@@ -13,26 +12,24 @@ cookiecutter.project\_slug }}.svg :target:
 
 {%- endif %}
 
-{% if cookiecutter.add\_pyup\_badge == 'y' %} .. image::
-<https://pyup.io/repos/github/>{{ cookiecutter.github\_username }}/{{
-cookiecutter.project\_slug }}/shield.svg :target:
-<https://pyup.io/repos/github/>{{ cookiecutter.github\_username }}/{{
-cookiecutter.project\_slug }}/ :alt: Updates {% endif %}
+{% if cookiecutter.add_pyup_badge == 'y' %} .. image::
+<https://pyup.io/repos/github/>{{ cookiecutter.github_username }}/{{
+cookiecutter.project_slug }}/shield.svg :target:
+<https://pyup.io/repos/github/>{{ cookiecutter.github_username }}/{{
+cookiecutter.project_slug }}/ :alt: Updates {% endif %}
 
-{{ cookiecutter.project\_short\_description }}
+{{ cookiecutter.project_short_description }}
 
-{% if is\_open\_source %} \* Free software: {{
-cookiecutter.open\_source\_license }} \* Documentation: <https://>{{
-cookiecutter.project\_slug | replace("\_", "-") }}.readthedocs.io. {%
+{% if is_open_source %} \* Free software: {{
+cookiecutter.open_source_license }} \* Documentation: <https://>{{
+cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io. {%
 endif %}
 
-Features
-========
+## Features
 
 - TODO
 
-Credits
-=======
+## Credits
 
 This package was created with
 [Cookiecutter](https://github.com/audreyr/cookiecutter) and the
