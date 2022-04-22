@@ -108,13 +108,13 @@ Before you submit a pull request, check that it meets these guidelines:
 
 To run a subset of tests:
 
-    {% if cookiecutter.use_pytest == 'y' -%}
+{% if cookiecutter.use_pytest == 'y' -%}
 
-> \$ pytest [tests.test](){{ cookiecutter.project_slug }}
+    pytest tests.test_{{ cookiecutter.project_slug }}
 
 {% else %}
 
-:   \$ python -m unittest [tests.test](){{ cookiecutter.project_slug }}
+    python -m unittest tests.test_{{ cookiecutter.project_slug }}
 
 {%- endif %}
 
