@@ -44,8 +44,8 @@ Linux:
 
 Windows:
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter-pypackage?branch=master&svg=true
-    :target: https://ci.appveyor.com/project/audreyr/cookiecutter-pypackage/branch/master
+.. image:: https://ci.appveyor.com/api/projects/status/github/tparkerd/cookiecutter-pypackage?branch=master&svg=true
+    :target: https://ci.appveyor.com/project/tparkerd/cookiecutter-pypackage/branch/master
     :alt: Windows build status on Appveyor
 
 Quickstart
@@ -154,6 +154,6 @@ make my own packaging experience better.
 .. _`veit/cookiecutter-namespace-template`: https://github.com/veit/cookiecutter-namespace-template
 .. _`zillionare/cookiecutter-pypackage`: https://zillionare.github.io/cookiecutter-pypackage/
 .. _`waynerv/cookiecutter-pypackage`: https://waynerv.github.io/cookiecutter-pypackage/
-.. _github comparison view: https://github.com/tony/cookiecutter-pypackage-pythonic/compare/audreyr:master...master
-.. _`network`: https://github.com/audreyr/cookiecutter-pypackage/network
-.. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
+.. _github comparison view: https://github.com/tony/cookiecutter-pypackage-pythonic/compare/tparkerd:master...master
+.. _`network`: https://github.com/tparkerd/cookiecutter-pypackage/network
+.. _`family tree`: https://github.com/tparkerd/cookiecutter-pypackage/network/members
