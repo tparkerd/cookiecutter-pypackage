@@ -113,9 +113,7 @@ To run a subset of tests:
 {% else %}
 
     python -m unittest tests.test_{{ cookiecutter.project_slug }}
-
 {%- endif %}
-
 ## Deploying
 
 A reminder for the maintainers on how to deploy. Make sure all your
