@@ -1,5 +1,4 @@
 # {{ cookiecutter.project_name }}
-
 {% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
 {% if is_open_source %}
 [![image](https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug  }}.svg)](https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
