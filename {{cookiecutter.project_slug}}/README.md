@@ -1,7 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-{% set is_open_source = cookiecutter.open_source_license != 'Not
-open source' -%}
+{% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
 {% if is_open_source %}
 [![image](https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug  }}.svg)](https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
 [![Documentation Status](https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest)](https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?version=latest)
@@ -13,7 +12,7 @@ open source' -%}
 {% if is_open_source %}
 * Free software: {{
 cookiecutter.open_source_license }}
-* Documentation: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io.
+* Documentation: <https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io>.
 {% endif %}
 ## Features
 
