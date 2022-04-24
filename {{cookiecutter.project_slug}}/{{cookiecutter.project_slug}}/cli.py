@@ -10,8 +10,8 @@ from os.path import realpath
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 import click
 {%- endif %}
-from . import __version__, log
 
+from . import __version__, log
 
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 @click.command()
