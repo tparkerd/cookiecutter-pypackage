@@ -10,6 +10,9 @@ from os.path import realpath
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 import click
 {%- endif %}
+from . import __version__, log
+
+
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 @click.command()
 def main(args=None):
@@ -19,10 +22,6 @@ def main(args=None):
     click.echo("See click documentation at https://click.palletsprojects.com/")
     return 0
 {%- endif %}
-
-from . import __version__, log
-
-
 {%- if cookiecutter.command_line_interface|lower == 'argparse' %}
 def main():
     """Console script for {{cookiecutter.project_slug}}."""
@@ -80,8 +79,8 @@ def main():
     except Exception as e:
         logging.exception(e)
         raise
-
 {%- endif %}
+
 
 if __name__ == "__main__":
     sys.exit(main())  # pragma: no cover
