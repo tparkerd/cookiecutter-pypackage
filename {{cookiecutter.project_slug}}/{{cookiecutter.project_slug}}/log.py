@@ -6,7 +6,8 @@ from rich.logging import RichHandler
 
 from . import __version__
 
-def configure(module_name = None, **kwargs):
+
+def configure(module_name=None, **kwargs):
     """Set up log files and associated handlers"""
     # Configure logging, stderr and file logs
     logging_level = logging.INFO
@@ -14,7 +15,9 @@ def configure(module_name = None, **kwargs):
         logging_level = logging.DEBUG
 
     # TODO: set default log format
-    logFormatter = logging.Formatter("%(asctime)s - [%(levelname)-4.8s] - %(filename)s %(lineno)d - %(message)s")
+    logFormatter = logging.Formatter(
+        "%(asctime)s - [%(levelname)-4.8s] - %(filename)s %(lineno)d - %(message)s"
+    )
     rootLogger = logging.getLogger()
     rootLogger.setLevel(logging.DEBUG)
 
@@ -22,7 +25,7 @@ def configure(module_name = None, **kwargs):
     # TODO: format syslog output
     # NOTE: add module/package name to each line in log (so grep can be used to filter)
     # NOTE: '/dev/log' is specific to Linux systems (*not* including MacOS!)
-    sysLogHandler = SysLogHandler(address = '/dev/log')
+    sysLogHandler = SysLogHandler(address="/dev/log")
     sysLogHandler.setFormatter(logFormatter)
     sysLogHandler.setLevel(logging_level)
     rootLogger.addHandler(sysLogHandler)
@@ -44,10 +47,8 @@ def configure(module_name = None, **kwargs):
     # TODO: Add logging to userspace file
     # NOTE: consider using a TSV style log for easier parsing
 
-
     # TODO: Add logging to database
     # # Database log
 
-    logging.debug(f'Running {module_name} {__version__}')
+    logging.debug(f"Running {module_name} {__version__}")
     logging.debug(f"Command: {kwargs}")
-
