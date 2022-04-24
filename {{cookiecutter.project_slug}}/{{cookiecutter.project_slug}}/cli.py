@@ -10,7 +10,6 @@ from os.path import realpath
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
 import click
 {%- endif %}
-
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 @click.command()
 def main(args=None):
@@ -20,6 +19,7 @@ def main(args=None):
     click.echo("See click documentation at https://click.palletsprojects.com/")
     return 0
 {%- endif %}
+
 from . import __version__, log
 
 
