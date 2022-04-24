@@ -63,7 +63,7 @@ def main():
         log.configure(module_name="main", **vars(args))
 
         if args.dryrun:
-            logging.info(f"DRY-RUN MODE ENABLED")
+            logging.info("DRY-RUN MODE ENABLED")
 
         # Disable progress bars if verbose mode enabled
         if args.verbose:
